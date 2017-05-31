@@ -5,4 +5,6 @@ package com.cocal.model;
  * 目标实体
  */
 public class TargetEntity {
+
+
 }
