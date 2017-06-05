@@ -40,8 +40,8 @@ public class InnerGetMockController {
     @RequestMapping(value = "/mock/{id}", method = RequestMethod.GET)
     public Map<String,String> doMock(@PathVariable("id") String id,HttpServletRequest req){
 
-        //Optional<MockEntity> entityOptional = Optional.ofNullable(mockEntityRepository.findOne(id));
-       // MockEntity mockEntity = entityOptional.orElse(MokerConstDto.notExist);
+        Optional<MockEntity> entityOptional = Optional.ofNullable(mockEntityRepository.findOne(id));
+        MockEntity mockEntity = entityOptional.orElse(MokerConstDto.notExist);
 
         Map<String,String> params = getRequestParams(req);
 
